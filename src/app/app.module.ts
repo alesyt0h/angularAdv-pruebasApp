@@ -2,15 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MedicosComponent } from './intermedias/espias/medicos.component';
+import { MedicosComponent } from './unitarias/avanzadas/espias/medicos.component';
+import { MedicoComponent } from './integradas/basicas/medico/medico.component';
+import { HospitalComponent } from './integradas/basicas/hospital/hospital.component';
+import { IncrementadorComponent } from './integradas/intermedias/incrementador/incrementador.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MedicosComponent
+    MedicosComponent,
+    MedicoComponent,
+    HospitalComponent,
+    IncrementadorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
