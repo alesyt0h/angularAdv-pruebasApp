@@ -7,6 +7,10 @@ import { MedicoComponent } from './integradas/basicas/medico/medico.component';
 import { HospitalComponent } from './integradas/basicas/hospital/hospital.component';
 import { IncrementadorComponent } from './integradas/intermedias/incrementador/incrementador.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { rutas } from './integradas/avanzadas/rutas/app.routes';
+import { NavbarComponent } from './integradas/avanzadas/navbar/navbar.component';
+import { RouterMedicoComponent } from './integradas/avanzadas/router-medico/router-medico.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,14 @@ import { FormsModule } from '@angular/forms';
     MedicosComponent,
     MedicoComponent,
     HospitalComponent,
-    IncrementadorComponent
+    IncrementadorComponent,
+    NavbarComponent,
+    RouterMedicoComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(rutas)
   ],
   providers: [],
   bootstrap: [AppComponent]
